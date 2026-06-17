@@ -12,3 +12,87 @@
 --white: #FFF;
 --gray: #B0B0B0;
 }
+.footer-nexora{
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 50px 0 20px;
+}
+
+.footer-logo{
+    width: 140px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.footer-description{
+    font-family: "Rethink Sans", sans-serif;
+    color: var(--gray);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.footer-title{
+    font-family: "Bungee", sans-serif;
+    color: var(--cyan);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-social a{
+    color: var(--white);
+    font-size: 1.8rem;
+    transition: .3s;
+}
+
+.footer-social a:hover{
+    color: var(--cyan);
+}
+
+.footer-payments{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-payments i{
+    font-size: 2rem;
+    color: var(--cyan);
+}
+
+.footer-divider{
+    border-color: rgba(255,255,255,.2);
+    margin-top: 40px;
+}
+
+.footer-bottom{
+    text-align: center;
+    font-family: "Rethink Sans", sans-serif;
+    color: var(--gray);
+    font-size: .9rem;
+}
+
+@media (min-width: 992px){
+
+    .footer-logo{
+        margin: 0 0 15px;
+    }
+
+    .footer-description{
+        margin: 0;
+    }
+
+    .footer-social{
+        justify-content: flex-start;
+    }
+
+    .footer-payments{
+        justify-content: flex-start;
+    }
+}
