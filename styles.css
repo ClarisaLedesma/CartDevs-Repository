@@ -12,6 +12,145 @@
 --white: #FFF;
 --gray: #B0B0B0;
 }
+
+body {
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: "Rethink Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+.intro {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark);
+    z-index: 9999;
+    animation: hidelintro 5s forwards;
+}
+
+@keyframes hidelintro{
+    0%,80%{
+        opacity:1;
+        visibility: visible;
+    }
+    100% {
+        opacity:0;
+        visibility: hidden;
+    }
+}
+
+.animation {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cart {
+    font-size: 120px;
+    color: var(--cyan);
+    text-shadow: 0 0 10px var(--cyan),
+     0 0 30px var(--cyan), 0 0 50px var(--cyan);
+     z-index: 10;
+
+}
+
+.product {
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.product img {
+    width: 120px;
+}
+
+.p1 {
+    animation: explode1 3s forwards;
+}
+.p2 {
+    animation: explode2 3s forwards;
+}
+.p3 {
+    animation: explode3 3s forwards;
+}
+
+@keyframes explode1{
+       0% {
+        transform: translate(-50%,-50%) scale(0);
+        opacity: 1;
+}
+
+    30% {
+        opacity: 1;
+    }
+
+    100%{
+        transform: translate(0x,280px) rotate(10deg) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes explode2{
+       0% {
+        transform: translate(-50%,-50%) scale(0);
+        opacity: 1;
+}
+
+    30% {
+        opacity: 1;
+    }
+
+    100%{
+        transform: translate(0x,280px) rotate(15deg) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes explode3{
+      0% {
+        transform: translate(-50%,-50%) scale(0);
+        opacity: 1;
+}
+
+    30% {
+        opacity: 1;
+    }
+
+    100%{
+        transform: translate(0x,280px) rotate(10deg) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes logoGlow{
+    from{
+        text-shadow: 0 0 10px var(--cyan);
+    }
+
+    to{
+        text-shadow: 0 0 20px var(--cyan), 0 0 40px var(--cyan), 0 0 60px var(--cyan);
+    }
+}
+
+.animation h1{
+    margin-top: 30px;
+    color: var(--cyan);
+    letter-spacing: 4px;
+    text-shadow: 
+    0 0 10px var(--cyan),
+    0 0 40px var(--cyan);
+    font-family: "Rubik Glitch", system-ui;
+     animation:logoGlow 2s infinite alternate;
+}
+
+
 .footer-nexora{
     background-color: var(--dark);
     color: var(--white);
