@@ -62,12 +62,18 @@
 }
 
 .footer-payments i{
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: var(--cyan);
+    transition: .3s;
+}
+
+.footer-payments i:hover{
+    color: var(--white);
+    transform: translateY(-3px);
 }
 
 .footer-divider{
-    border-color: rgba(255,255,255,.2);
+    border-color: var(--gray);
     margin-top: 40px;
 }
 
@@ -79,20 +85,47 @@
 }
 
 @media (min-width: 992px){
-
     .footer-logo{
         margin: 0 0 15px;
     }
-
     .footer-description{
         margin: 0;
     }
-
     .footer-social{
         justify-content: flex-start;
     }
-
     .footer-payments{
         justify-content: flex-start;
     }
+    .footer-payments-container{
+        text-align: left;
+    }
+}
+
+
+
+.footer-links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li{
+    margin-bottom: 10px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: var(--gray);
+    font-family: "Rethink Sans", sans-serif;
+    transition: .3s;
+}
+
+.footer-links a:hover{
+    color: var(--cyan);
+}
+.footer-brand-name{
+    font-family: "Bungee", sans-serif;
+    color: var(--white);
+    margin-bottom: 15px;
 }
