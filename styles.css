@@ -37,16 +37,20 @@ body {
   box-shadow: 0 0 10px var(--cyan);
 }
 
+.head-ecommerce{
+  padding: 10px 10px 0px 10px;
+}
+
 .head-ecommerce h2 {
-  font-size: 28px;
-  font-family: var();
-  font-weight: 700;
+  font-size: 22px;
+  font-family: var(--font-primary);
+  font-weight: 600;
   color: var(--white);
   margin-top: 10px;
 }
 
 .head-ecommerce p {
-  font-size: 18px;
+  font-size: 16px;
   font-family: var();
   color: var(--gray);
   margin-bottom: 30px;
@@ -54,12 +58,16 @@ body {
 
 .ecommerce img {
   object-fit: contain;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
+}
+
+.footer-ecommerce{
+  padding: 1px 10px 10px 10px ;
 }
 
 .footer-ecommerce h3 {
-  font-size: 20px;
+  font-size: 19px;
   font-family: var();
   color: var(--gray);
   margin-top: 10px;
@@ -80,8 +88,12 @@ body {
 
 /* /PARTE DERECHA */
 
+.head-types-product{
+  padding: 10px 10px 0px 10px;
+}
+
 .types {
-  padding: 0 0 10px 0;
+  padding: 10px;
 }
 
 .types div {
@@ -95,8 +107,9 @@ body {
 }
 
 .types-product h2 {
-  font-size: 28px;
-  font-family: var();
+  font-size: 22px;
+  font-family: var(--font-primary);
+  font-weight: 600;
   color: var(--white);
   margin-top: 5px;
   margin-bottom: 20px;
@@ -118,8 +131,8 @@ body {
 
 .types img {
   object-fit: contain;
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
 }
 
 /* //SECTION-NEXORA-SHOP */
