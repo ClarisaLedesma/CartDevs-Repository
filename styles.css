@@ -25,6 +25,8 @@ body {
 
 /* //SECTION-ECOMMERCE */
 
+/* /PARTE IZQUIERDA */
+
 .ecommerce{
   padding: 20px 40px;
 }
@@ -74,6 +76,50 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+/* /PARTE DERECHA */
+
+.types {
+  padding: 0 0 10px 0;
+}
+
+.types div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--negro-claro);
+  border-radius: 15px;
+  box-shadow: 0 0 5px;
+}
+
+.types-product h2 {
+  font-size: 28px;
+  font-family: var();
+  color: var(--white);
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.types h3 {
+  font-size: 20px;
+  font-family: var();
+  color: var(--cyan);
+  margin-top: 15px;
+  min-height: 45px;
+}
+
+.types p {
+  font-size: 16px;
+  font-family: var();
+  color: var(--gray);
+}
+
+.types img {
+  object-fit: contain;
+  width: 140px;
+  height: 140px;
 }
 
 /* //SECTION-NEXORA-SHOP */
