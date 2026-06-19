@@ -35,6 +35,47 @@ body {
   box-shadow: 0 0 10px var(--cyan);
 }
 
+.head-ecommerce h2 {
+  font-size: 28px;
+  font-family: var();
+  font-weight: 700;
+  color: var(--white);
+  margin-top: 10px;
+}
+
+.head-ecommerce p {
+  font-size: 18px;
+  font-family: var();
+  color: var(--gray);
+  margin-bottom: 30px;
+}
+
+.ecommerce img {
+  object-fit: contain;
+  width: 70px;
+  height: 70px;
+}
+
+.footer-ecommerce h3 {
+  font-size: 20px;
+  font-family: var();
+  color: var(--gray);
+  margin-top: 10px;
+}
+
+.footer-ecommerce p {
+  font-size: 14px;
+  color: var(--gray);
+  font-family: var();
+}
+
+.footer-ecommerce div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 /* //SECTION-NEXORA-SHOP */
 
 .nexora-shop {
