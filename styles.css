@@ -27,17 +27,17 @@ body {
 
 /* /PARTE IZQUIERDA */
 
-.ecommerce{
+.ecommerce {
   padding: 20px 40px;
 }
 
-.ecommerce article{
-  border: 3px solid  var(--blue);
+.ecommerce article {
+  border: 3px solid var(--blue);
   border-radius: 20px;
   box-shadow: 0 0 10px var(--cyan);
 }
 
-.head-ecommerce{
+.head-ecommerce {
   padding: 10px 10px 0px 10px;
 }
 
@@ -62,8 +62,8 @@ body {
   height: 60px;
 }
 
-.footer-ecommerce{
-  padding: 1px 10px 10px 10px ;
+.footer-ecommerce {
+  padding: 1px 10px 10px 10px;
 }
 
 .footer-ecommerce h3 {
@@ -88,7 +88,7 @@ body {
 
 /* /PARTE DERECHA */
 
-.head-types-product{
+.head-types-product {
   padding: 10px 10px 0px 10px;
 }
 
@@ -107,7 +107,7 @@ body {
   transition: 0.4s;
 }
 
-.types div:hover{
+.types div:hover {
   transform: translateY(-10px);
 }
 
@@ -138,6 +138,71 @@ body {
   object-fit: contain;
   width: 130px;
   height: 130px;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .head-ecommerce h2 {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 10px;
+  }
+
+  .head-ecommerce p {
+    font-size: 14px;
+    font-family: var();
+    color: var(--gray);
+    margin-bottom: 30px;
+  }
+
+  .ecommerce img {
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-ecommerce h3 {
+    font-size: 15px;
+    font-family: var();
+    color: var(--gray);
+    margin-top: 10px;
+  }
+
+  .footer-ecommerce p {
+    font-size: 11px;
+    color: var(--gray);
+    font-family: var();
+  }
+
+  .types-product h2 {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .types h3 {
+    font-size: 13px;
+    font-family: var();
+    color: var(--cyan);
+    margin-top: 15px;
+    min-height: 45px;
+  }
+
+  .types p {
+    font-size: 12px;
+    font-family: var();
+    color: var(--gray);
+  }
+
+  .types img {
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+  }
 }
 
 /* //SECTION-NEXORA-SHOP */
