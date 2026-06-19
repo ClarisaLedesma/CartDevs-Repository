@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;;
 }
 
 :root {
@@ -20,7 +20,6 @@ body {
   background-color: var(--dark);
   color: var(--white);
   font-family: "Rethink Sans", sans-serif;
-  overflow-x: hidden;
 }
 
 /* //SECTION-ECOMMERCE */
@@ -250,7 +249,7 @@ body {
   }
 
   .types h3 {
-    font-size: 13px;
+    font-size: 15px;
     font-family: var();
     color: var(--cyan);
     margin-top: 15px;
@@ -288,12 +287,12 @@ body {
 
   .ecommerce img {
     object-fit: contain;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .footer-ecommerce h3 {
-    font-size: 15px;
+    font-size: 18px;
     font-family: var();
     color: var(--gray);
     margin-top: 10px;
@@ -306,7 +305,7 @@ body {
   }
 
   .types-product h2 {
-  font-size: 16px;
+  font-size: 17px;
   font-family: var(--font-primary);
   font-weight: 600;
   color: var(--white);
@@ -315,7 +314,7 @@ body {
 }
 
 .types h3 {
-  font-size: 19px;
+  font-size: 20px;
   font-family: var();
   color: var(--cyan);
   margin-top: 15px;
@@ -323,7 +322,7 @@ body {
 }
 
 .types p {
-  font-size: 13px;
+  font-size: 15px;
   font-family: var();
   color: var(--gray);
 }
