@@ -23,6 +23,18 @@ body {
   overflow-x: hidden;
 }
 
+/* //SECTION-ECOMMERCE */
+
+.ecommerce{
+  padding: 20px 40px;
+}
+
+.ecommerce article{
+  border: 3px solid  var(--blue);
+  border-radius: 20px;
+  box-shadow: 0 0 10px var(--cyan);
+}
+
 /* //SECTION-NEXORA-SHOP */
 
 .nexora-shop {
