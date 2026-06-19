@@ -205,6 +205,136 @@ body {
   }
 }
 
+@media (min-width: 426px) and (max-width: 1023px) {
+  .head-ecommerce h2 {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 10px;
+  }
+
+  .head-ecommerce p {
+    font-size: 14px;
+    font-family: var();
+    color: var(--gray);
+    margin-bottom: 30px;
+  }
+
+  .ecommerce img {
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-ecommerce h3 {
+    font-size: 15px;
+    font-family: var();
+    color: var(--gray);
+    margin-top: 10px;
+  }
+
+  .footer-ecommerce p {
+    font-size: 12px;
+    color: var(--gray);
+    font-family: var();
+  }
+
+  .types-product h2 {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .types h3 {
+    font-size: 13px;
+    font-family: var();
+    color: var(--cyan);
+    margin-top: 15px;
+    min-height: 45px;
+  }
+
+  .types p {
+    font-size: 12px;
+    font-family: var();
+    color: var(--gray);
+  }
+
+  .types img {
+    object-fit: contain;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 426px) {
+  .head-ecommerce h2 {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 10px;
+  }
+
+  .head-ecommerce p {
+    font-size: 13px;
+    font-family: var();
+    color: var(--gray);
+    margin-bottom: 30px;
+  }
+
+  .ecommerce img {
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-ecommerce h3 {
+    font-size: 15px;
+    font-family: var();
+    color: var(--gray);
+    margin-top: 10px;
+  }
+
+  .footer-ecommerce p {
+    font-size: 13px;
+    color: var(--gray);
+    font-family: var();
+  }
+
+  .types-product h2 {
+  font-size: 16px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  color: var(--white);
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.types h3 {
+  font-size: 19px;
+  font-family: var();
+  color: var(--cyan);
+  margin-top: 15px;
+  min-height: 45px;
+}
+
+.types p {
+  font-size: 13px;
+  font-family: var();
+  color: var(--gray);
+}
+
+.types img {
+  object-fit: contain;
+  width: 100px;
+  height: 100px;
+}
+}
+
 /* //SECTION-NEXORA-SHOP */
 
 .nexora-shop {
@@ -343,25 +473,25 @@ body {
     font-family: var(--font-primary);
     font-weight: 600;
     color: var(--white);
-    font-size: 14px;
+    font-size: 17px;
     padding: 0 0 15px 0;
   }
 
   .nexora-shop img {
     object-fit: contain;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
 
   .nexora-shop h3 {
     color: var(--white);
-    font-size: 10px;
+    font-size: 13px;
     font-weight: bold;
   }
 
   .nexora-shop p {
     color: var(--gray);
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .article-1 {
