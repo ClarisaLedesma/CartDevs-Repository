@@ -104,6 +104,11 @@ body {
   background-color: var(--negro-claro);
   border-radius: 15px;
   box-shadow: 0 0 5px;
+  transition: 0.4s;
+}
+
+.types div:hover{
+  transform: translateY(-10px);
 }
 
 .types-product h2 {
