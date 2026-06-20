@@ -21,7 +21,7 @@
         <h2>NEXORA <span class="cyan-text">SHOP</span></h2>
         
         <form class="pantalla-formulario" action="" onsubmit="document.getElementById('toggle-exito').checked = true; return false;">
-            <p class="subtitulo">Restablecer acceso al ciberespacio</p>
+            <p class="subtitulo">Restablecer acceso a tu carrito</p>
 
             <div class="grupo-input">
                 <label>NUEVA CONTRASEÑA</label>
@@ -30,10 +30,26 @@
                     <input type="password" placeholder="••••••••" required minlength="6">
                 </div>
             </div>
-    
+    <div class="grupo-input">
+                <label>CONFIRMAR CONTRASEÑA</label>
+                <div class="input-icono">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="••••••••" required minlength="6">
+                </div>
+            </div>
 
+            <button type="submit" class="btn-ingresar">RESTABLECER CONTRASEÑA</button>
+        </form>
 
-    
+        <div class="pantalla-exito">
+            <div class="icono-exito">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>¡CARRITO ACTUALIZADO!</h3>
+            <p>Tu nueva contraseña ha sido ingresada al carrito con éxito.</p>
+            <a href="index.html" class="btn-ingresar flex-center">VOLVER A NEXORA</a>
+        </div>
+    </div>
       <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
