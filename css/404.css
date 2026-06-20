@@ -11,12 +11,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Orbitron", sans-serif !important; 
+  font-family: "Orbitron", sans-serif !important;
 }
 
 body {
   min-height: 100vh !important;
-  background: radial-gradient(circle at top, rgba(0, 217, 255, 0.15), transparent 40%), var(--black) !important;
+  background:
+    radial-gradient(circle at top, rgba(0, 217, 255, 0.15), transparent 40%),
+    var(--black) !important;
   overflow: hidden !important;
   display: flex !important;
   justify-content: center !important;
@@ -61,4 +63,58 @@ body {
   opacity: 0.05;
   filter: drop-shadow(0 0 20px var(--cyan));
   z-index: 1;
+}
+
+.code {
+  color: var(--cyan);
+  letter-spacing: 8px;
+  font-size: 1rem;
+}
+.error-container .number {
+  font-size: 10rem !important;
+  color: var(--white) !important;
+  text-shadow:
+    0 0 20px var(--cyan),
+    0 0 50px var(--cyan) !important;
+  margin-bottom: 20px !important;
+  animation: flotar 4s ease-in-out infinite !important;
+}
+
+.error-container .number span {
+  color: var(--cyan) !important;
+}
+
+.error-container h2 {
+  color: var(--white) !important;
+  font-size: 2rem !important;
+  margin-bottom: 20px !important;
+  animation: flotar 4s ease-in-out infinite !important;
+  animation-delay: 0.5s !important;
+}
+
+.error-container p {
+  color: var(--gray) !important;
+  max-width: 650px !important;
+  margin: auto !important;
+  line-height: 1.8 !important;
+  margin-bottom: 40px !important;
+  animation: flotar 4s ease-in-out infinite !important;
+  animation-delay: 1s !important;
+}
+
+.error-container .btn-home {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+  color: var(--white) !important;
+  padding: 15px 35px !important;
+  border: 2px solid var(--cyan) !important;
+  border-radius: 50px !important;
+  transition: 0.4s !important;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.2) !important;
+  position: relative !important;
+  background: transparent !important;
+  z-index: 10 !important;
+  cursor: pointer !important;
 }
