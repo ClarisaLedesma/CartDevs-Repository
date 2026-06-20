@@ -287,17 +287,20 @@
                 </article>
 
                 <article class="col-lg-6 d-flex justify-content-center flex-column right">
-                  <div>
-                    <input
+                  <div class="right-top">
+                    <form>
+                      <input
                       type="email"
                       name=""
                       id=""
                       placeholder="Ingresa tu email"
-                    />
-                    <button type="submit">SUSCRIBIRME</button>
+                      required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="❌ Por favor, ingresa un correo electrónico válido"
+                      />
+                      <button type="submit">SUSCRIBIRME</button>
+                    </form>
                   </div>
-                  <div>
-                    <p>No te preocupes, no enviamo spam.</p>
+                  <div class="right-bottom">
+                    <p>No te preocupes, no enviamos spam.</p>
                   </div>
                 </article>
               </div>

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;;
+  box-sizing: border-box;
 }
 
 :root {
@@ -125,6 +125,7 @@ body {
   color: var(--cyan);
   margin-top: 15px;
   min-height: 45px;
+  text-shadow: 0 0 30px var(--cyan);
 }
 
 .types p {
@@ -189,6 +190,7 @@ body {
     color: var(--cyan);
     margin-top: 15px;
     min-height: 45px;
+    text-shadow: 0 0 30px var(--cyan);
   }
 
   .types p {
@@ -254,6 +256,7 @@ body {
     color: var(--cyan);
     margin-top: 15px;
     min-height: 45px;
+    text-shadow: 0 0 30px var(--cyan);
   }
 
   .types p {
@@ -305,33 +308,34 @@ body {
   }
 
   .types-product h2 {
-  font-size: 17px;
-  font-family: var(--font-primary);
-  font-weight: 600;
-  color: var(--white);
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
+    font-size: 17px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
 
-.types h3 {
-  font-size: 20px;
-  font-family: var();
-  color: var(--cyan);
-  margin-top: 15px;
-  min-height: 45px;
-}
+  .types h3 {
+    font-size: 20px;
+    font-family: var();
+    color: var(--cyan);
+    margin-top: 15px;
+    min-height: 45px;
+    text-shadow: 0 0 30px var(--cyan);
+  }
 
-.types p {
-  font-size: 15px;
-  font-family: var();
-  color: var(--gray);
-}
+  .types p {
+    font-size: 15px;
+    font-family: var();
+    color: var(--gray);
+  }
 
-.types img {
-  object-fit: contain;
-  width: 100px;
-  height: 100px;
-}
+  .types img {
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+  }
 }
 
 /* //SECTION-NEXORA-SHOP */
@@ -358,6 +362,7 @@ body {
   color: var(--white);
   font-size: 13px;
   font-weight: bold;
+  text-shadow: 0 0 20px var(--white);
 }
 
 .nexora-shop p {
@@ -400,6 +405,7 @@ body {
     color: var(--white);
     font-size: 11px;
     font-weight: bold;
+    text-shadow: 0 0 20px var(--white);
   }
 
   .nexora-shop p {
@@ -437,6 +443,7 @@ body {
     color: var(--white);
     font-size: 11px;
     font-weight: bold;
+    text-shadow: 0 0 20px var(--white);
   }
 
   .nexora-shop p {
@@ -486,6 +493,7 @@ body {
     color: var(--white);
     font-size: 13px;
     font-weight: bold;
+    text-shadow: 0 0 20px var(--white);
   }
 
   .nexora-shop p {
@@ -518,30 +526,30 @@ body {
 
 /* //SECTION-PROMOTION */
 
-.section-promotion{
+.section-promotion {
   padding: 20px 40px;
 }
 
-.h2-promotion{
+.h2-promotion {
   padding: 0 0 20px 0;
   font-family: var(--font-primary);
   font-weight: 600;
   font-size: 23px;
 }
 
-.container-promotion{
+.container-promotion {
   background-color: var(--negro-claro);
   border: 1px solid rgba(128, 128, 128, 0.327);
   border-radius: 35px;
 }
 
-.section-promotion img{
+.section-promotion img {
   width: 150px;
   height: 150px;
   object-fit: contain;
 }
 
-.container-promotion img{
+.container-promotion img {
   width: 300px;
   height: 300px;
   object-fit: contain;
@@ -549,25 +557,63 @@ body {
 
 /* /PARTE IZQUIERDA */
 
-.left h4{
+.left h4 {
   font-family: var(--font-primary);
   font-weight: bold;
   font-size: 22px;
+  text-shadow: 0 0 30px var(--white);
 }
 
-.left span{
+.left span {
   color: var(--cyan);
+  text-shadow: 0 0 30px var(--cyan);
 }
 
-.left h3{
+.left h3 {
   color: var(--blue);
   font-family: var(--font-primary);
   font-weight: bold;
   font-size: 48px;
+  text-shadow: 0 0 50px var(--cyan);
 }
 
-.left p{
+.left p {
   font-size: 16px;
+}
+
+/* /PARTE DERECHA */
+
+.right-top {
+  padding: 0 0 5px 0;
+}
+
+.right-top input {
+  background-color: var(--negro-claro);
+  padding: 12px 125px 12px 12px;
+  border-radius: 9px;
+  border: 1px solid rgba(128, 128, 128, 0.327);
+  color: var(--white);
+}
+
+.right-top input:focus {
+  outline: none;
+  border: 1px solid var(--gray);
+}
+
+.right-top button {
+  padding: 13px;
+  border-radius: 9px;
+  margin-left: -40px;
+  background-color: var(--blue);
+  border: 1px solid var(--cyan);
+  box-shadow: 0 0 20px var(--cyan);
+  color: var(--white);
+  font-weight: bold;
+}
+
+.right-bottom p {
+  color: var(--gray);
+  font-size: 14px;
 }
 
 /* //SECTION-FOOTER */
