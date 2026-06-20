@@ -13,3 +13,52 @@
   box-sizing: border-box;
   font-family: "Orbitron", sans-serif !important; 
 }
+
+body {
+  min-height: 100vh !important;
+  background: radial-gradient(circle at top, rgba(0, 217, 255, 0.15), transparent 40%), var(--black) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--cyan) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.15;
+  animation: move 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(80px);
+  }
+}
+
+.error-container {
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.back-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18rem;
+  opacity: 0.05;
+  filter: drop-shadow(0 0 20px var(--cyan));
+  z-index: 1;
+}
