@@ -13,3 +13,56 @@
 --gray: #B0B0B0;
 }
 
+body {
+  margin: 0;
+  background-color: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+.nexora-nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background: rgba(10, 12, 18, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 217, 255, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nexora-branding img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(0, 217, 255, 0.35));
+  transition: 0.3s ease;
+}
+
+.nexora-branding a:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 18px rgba(0, 217, 255, 0.7));
+}
+
+.nexora-menu-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.nexora-menu-list a {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nexora-menu-list li a:hover,
+.nexora-has-drop:hover > .nexora-drop-btn {
+  color: var(--cyan);
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.6);
+}
