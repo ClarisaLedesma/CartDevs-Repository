@@ -98,3 +98,35 @@ body {
   color: var(--gray);
   white-space: nowrap;
 }
+
+.nexora-sub-panel li a:hover {
+  background: rgba(0, 217, 255, 0.08);
+  color: var(--white);
+  padding-left: 25px;
+}
+
+.nexora-nav-main .nexora-has-drop:hover .nexora-sub-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(5px);
+  pointer-events: auto;
+}
+
+.nexora-nav-main .nexora-has-drop:hover .nexora-arrow {
+  transform: rotate(180deg);
+}
+
+.nexora-search-container {
+  position: relative;
+}
+
+.nexora-search-container input {
+  width: 220px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  background: #111826;
+  color: white;
+  outline: none;
+  transition: all 0.3s;
+}
