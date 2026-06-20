@@ -167,3 +167,20 @@ error-container .btn-home:hover {
   95% { left: 0%; transform: scaleX(-1); }
   100% { transform: scaleX(1); }
 }
+.pista-carrito {
+  width: 100% !important;
+  height: 30px !important;
+  position: relative !important;
+  margin-top: 20px !important;
+  margin-bottom: -40px !important;
+  z-index: 3 !important;
+}
+
+.carrito {
+  position: absolute !important;
+  bottom: 0 !important;
+  font-size: 1.8rem !important;
+  color: var(--cyan) !important;
+  text-shadow: 0 0 10px var(--cyan) !important;
+  animation: deslizar 15s linear infinite !important;
+}
