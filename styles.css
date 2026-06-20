@@ -529,6 +529,12 @@ body {
   font-size: 23px;
 }
 
+.container-promotion{
+  background-color: var(--negro-claro);
+  border: 1px solid rgba(128, 128, 128, 0.327);
+  border-radius: 35px;
+}
+
 .section-promotion img{
   width: 150px;
   height: 150px;
@@ -539,6 +545,29 @@ body {
   width: 300px;
   height: 300px;
   object-fit: contain;
+}
+
+/* /PARTE IZQUIERDA */
+
+.left h4{
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.left span{
+  color: var(--cyan);
+}
+
+.left h3{
+  color: var(--blue);
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.left p{
+  font-size: 16px;
 }
 
 /* //SECTION-FOOTER */
