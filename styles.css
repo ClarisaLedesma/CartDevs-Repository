@@ -597,7 +597,7 @@ body {
 }
 
 .right-top,
-.right-bottom{
+.right-bottom {
   position: relative;
   z-index: 2;
 }
@@ -624,6 +624,11 @@ body {
   box-shadow: 0 0 20px var(--cyan);
   color: var(--white);
   font-weight: bold;
+  transition: 0.4s;
+}
+
+.right-top button:hover {
+  background-color: var(--cyan);
 }
 
 .right-bottom p {
@@ -694,6 +699,11 @@ body {
     color: var(--white);
     font-weight: bold;
     font-size: 16px;
+    transition: 0.4s;
+  }
+
+  .right-top button:hover {
+    background-color: var(--cyan);
   }
 
   .right-bottom p {
@@ -765,6 +775,11 @@ body {
     color: var(--white);
     font-weight: bold;
     font-size: 12px;
+    transition: 0.4s;
+  }
+
+  .right-top button:hover {
+    background-color: var(--cyan);
   }
 
   .right-bottom p {
@@ -773,7 +788,7 @@ body {
   }
 }
 
-@media (min-width: 376px) and (max-width: 426px){
+@media (min-width: 376px) and (max-width: 426px) {
   .h2-promotion {
     padding: 5px 0 18px 0;
     font-family: var(--font-primary);
@@ -836,6 +851,11 @@ body {
     color: var(--white);
     font-weight: bold;
     font-size: 12px;
+    transition: 0.4s;
+  }
+
+  .right-top button:hover {
+    background-color: var(--cyan);
   }
 
   .right-bottom p {
@@ -844,7 +864,7 @@ body {
   }
 }
 
-@media (min-width: 320px) and (max-width: 376px){
+@media (min-width: 320px) and (max-width: 376px) {
   .h2-promotion {
     padding: 5px 0 18px 0;
     font-family: var(--font-primary);
@@ -907,6 +927,11 @@ body {
     color: var(--white);
     font-weight: bold;
     font-size: 10px;
+    transition: 0.4s;
+  }
+
+  .right-top button:hover {
+    background-color: var(--cyan);
   }
 
   .right-bottom p {
