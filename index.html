@@ -27,16 +27,32 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <input type="checkbox" id="nexora-modal-toggle" class="nexora-chk-modal" />
-    <input
-      type="checkbox"
-      id="nexora-register-toggle"
-      class="nexora-chk-modal"
-    />
+  <input
+  type="radio"
+  id="nexora-modal-toggle"
+  name="nexora-modal-group"
+  class="nexora-chk-modal"
+/>
+
+<input
+  type="radio"
+  id="nexora-register-toggle"
+  name="nexora-modal-group"
+  class="nexora-chk-modal"
+/>
+
+<input
+  type="radio"
+  id="nexora-modal-close-trigger"
+  name="nexora-modal-group"
+  class="nexora-chk-modal"
+  checked
+/>
+
     <nav class="nexora-nav-main">
       <div class="nexora-branding">
         <a href="index.html">
-          <img src="./assets/navlogo.png" alt="Nexora Logo" />
+          <img src="nexora.png" alt="Nexora Logo" />
         </a>
       </div>
       <input type="checkbox" id="nexora-menu-toggle" class="nexora-chk-menu" />
@@ -120,21 +136,20 @@
         </label>
       </div>
     </nav>
-    <div class="nexora-modal-bg nexora-login-modal">
-      <div class="nexora-modal-box">
-        <label for="nexora-modal-close-trigger" class="nexora-modal-close"
-          >&times;</label
-        >
-        <div class="nexora-modal-top">
-          <h2>NEXORA <span>SHOP</span></h2>
-          <p>Iniciá sesión para acceder a la web</p>
-        </div>
 
-        <form
-          class="nexora-modal-inputs"
-          action="login-exito.html"
-          method="GET"
-        >
+ <div class="nexora-modal-bg nexora-login-modal">
+  <div class="nexora-modal-box">
+
+    <label for="nexora-modal-close-trigger" class="nexora-modal-close">
+      &times;
+    </label>
+
+    <div class="nexora-modal-top">
+      <h2>NEXORA <span>SHOP</span></h2>
+      <p>Iniciá sesión para acceder a la web</p>
+    </div>
+
+        <form class="nexora-modal-inputs" action="index.html" method="GET">
           <div class="nexora-form-row">
             <label for="loginEmail">Correo Electrónico</label>
             <div class="nexora-field-wrapper">
@@ -155,6 +170,10 @@
                 type="password"
                 id="loginPassword"
                 placeholder="••••••••"
+                minlength="8"
+                maxlength="15"
+                pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?&quot;':{}|<>]).{8,15}$"
+                title="La contraseña debe tener entre 8 y 15 caracteres, e incluir letras (a-z, A-Z), al menos un número y al menos un carácter especial."
                 required
               />
             </div>
@@ -164,32 +183,33 @@
               >¿Olvidaste tu contraseña?</a
             >
           </div>
+
           <button type="submit" class="nexora-btn-submit">INGRESAR</button>
         </form>
         <div class="nexora-modal-bottom">
           <p>
-            ¿No tenés una cuenta?
-            <label for="nexora-register-toggle" class="nexora-switch-link">
-              Registrate aquí
-            </label>
+            ¿No tenés cuenta?
+           <label for="nexora-register-toggle" class="nexora-switch-link">
+  Registrate aquí
+</label>
           </p>
         </div>
       </div>
     </div>
-    <div class="nexora-modal-bg nexora-register-modal">
-      <div class="nexora-modal-box">
-        <label for="nexora-modal-close-trigger" class="nexora-modal-close"
-          >&times;</label
-        >
-        <div class="nexora-modal-top">
-          <h2>NUEVO<span>USURARIO</span></h2>
-          <p>Unite a la web de Nexora Shop</p>
-        </div>
-        <form
-          class="nexora-modal-inputs"
-          action="registro-exito.html"
-          method="GET"
-        >
+
+  <div class="nexora-modal-bg nexora-register-modal">
+  <div class="nexora-modal-box">
+
+    <label for="nexora-modal-close-trigger" class="nexora-modal-close">
+      &times;
+    </label>
+
+    <div class="nexora-modal-top">
+      <h2>NUEVO <span>USUARIO</span></h2>
+      <p>Unite a la web de Nexora Shop</p>
+    </div>
+
+        <form class="nexora-modal-inputs" action="index.html" method="GET">
           <div class="nexora-form-row">
             <label for="regName">Nombre Completo</label>
             <div class="nexora-field-wrapper">
@@ -197,7 +217,7 @@
               <input
                 type="text"
                 id="regName"
-                placeholder="Clarisa Ledesma"
+                placeholder="Tu Usuario"
                 minlength="3"
                 pattern="^[a-zA-ZÀ-ÿ\s]+$"
                 title="El nombre solo debe contener letras."
@@ -236,14 +256,15 @@
               >Acepto los términos y condiciones de la red</label
             >
           </div>
+
           <button type="submit" class="nexora-btn-submit">CREAR CUENTA</button>
         </form>
         <div class="nexora-modal-bottom">
           <p>
             ¿Ya sos parte?
-            <label for="nexora-modal-toggle" class="nexora-switch-link">
-              Iniciá sesión
-            </label>
+            <label for="nexora-modal-toggle" class="nexora-switch-link"
+              >Iniciá sesión</label
+            >
           </p>
         </div>
       </div>
