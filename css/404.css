@@ -118,3 +118,52 @@ body {
   z-index: 10 !important;
   cursor: pointer !important;
 }
+error-container .btn-home:hover {
+  background: var(--cyan) !important;
+  color: var(--black) !important;
+  box-shadow: 0 0 30px var(--cyan) !important;
+}
+
+.hud {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.line {
+  width: 150px;
+  height: 2px;
+  background: var(--cyan);
+  box-shadow: 0 0 15px var(--cyan);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--cyan);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes deslizar {
+  0% { left: 0%; transform: scaleX(1); }
+  45% { left: 92%; transform: scaleX(1); }
+  50% { transform: scaleX(-1); }
+  95% { left: 0%; transform: scaleX(-1); }
+  100% { transform: scaleX(1); }
+}
