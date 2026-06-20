@@ -516,6 +516,31 @@ body {
   }
 }
 
+/* //SECTION-PROMOTION */
+
+.section-promotion{
+  padding: 20px 40px;
+}
+
+.h2-promotion{
+  padding: 0 0 20px 0;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.section-promotion img{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.container-promotion img{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
 /* //SECTION-FOOTER */
 
 .intro {
