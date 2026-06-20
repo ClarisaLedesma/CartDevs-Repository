@@ -19,7 +19,6 @@ body {
   color: var(--white);
   overflow-x: hidden;
 }
-
 .nexora-nav-main {
   display: flex;
   justify-content: space-between;
@@ -32,7 +31,6 @@ body {
   top: 0;
   z-index: 1000;
 }
-
 .nexora-branding img {
   height: 60px;
   width: auto;
@@ -40,19 +38,16 @@ body {
   filter: drop-shadow(0 0 12px rgba(0, 217, 255, 0.35));
   transition: 0.3s ease;
 }
-
 .nexora-branding a:hover img {
   transform: scale(1.05);
   filter: drop-shadow(0 0 18px rgba(0, 217, 255, 0.7));
 }
-
 .nexora-menu-list {
   display: flex;
   align-items: center;
   gap: 25px;
   list-style: none;
 }
-
 .nexora-menu-list a {
   text-decoration: none;
   color: var(--gray);
@@ -60,9 +55,46 @@ body {
   font-weight: 500;
   transition: all 0.3s ease;
 }
-
 .nexora-menu-list li a:hover,
 .nexora-has-drop:hover > .nexora-drop-btn {
   color: var(--cyan);
   text-shadow: 0 0 10px rgba(0, 217, 255, 0.6);
+}
+.nexora-arrow {
+  font-size: 0.75rem;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+.nexora-has-drop {
+  position: relative;
+}
+.nexora-mobile-item,
+.nexora-mobile-search-item {
+  display: none;
+}
+.nexora-nav-main .nexora-sub-panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(15px);
+  background: rgba(10, 15, 20, 0.98);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.7),
+    0 0 15px rgba(0, 217, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px 0;
+  min-width: 220px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+.nexora-sub-panel li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: var(--gray);
+  white-space: nowrap;
 }
