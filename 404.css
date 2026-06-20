@@ -184,3 +184,64 @@ error-container .btn-home:hover {
   text-shadow: 0 0 10px var(--cyan) !important;
   animation: deslizar 15s linear infinite !important;
 }
+
+@media (max-width: 768px) {
+  .error-container .number {
+    font-size: 6rem !important;
+  }
+  .back-error {
+    font-size: 11rem !important;
+  }
+  .error-container h2 {
+    font-size: 1.5rem !important;
+  }
+  .error-container p {
+    font-size: 0.9rem !important;
+  }
+  .line {
+    width: 70px;
+  }
+  .carrito {
+    font-size: 1.4rem !important;
+  }
+  .pista-carrito {
+    margin-bottom: -45px !important;
+  }
+}
+@media (max-width: 480px) {
+  .error-container .number {
+    font-size: 4.5rem !important;
+    margin-bottom: 10px !important;
+  }
+  .back-error {
+    font-size: 7rem !important;
+  }
+  .error-container h2 {
+    font-size: 1.2rem !important;
+  }
+  .error-container p {
+    font-size: 0.8rem !important;
+    padding: 0 10px !important; 
+  }
+  .hud {
+    margin-top: 35px !important;
+    gap: 10px !important;
+  }
+  .line {
+    width: 40px !important; 
+  }
+  .error-container .btn-home {
+    padding: 12px 25px !important; 
+    font-size: 0.9rem !important;
+  }
+}
+
+.fa-solid, .fa-house, .fa-cart-shopping, .carrito {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  display: inline-block !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  line-height: 1 !important;
+  text-rendering: auto !important;
+}
