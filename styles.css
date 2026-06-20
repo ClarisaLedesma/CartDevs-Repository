@@ -45,19 +45,16 @@ body {
   filter: drop-shadow(0 0 12px rgba(0, 217, 255, 0.35));
   transition: 0.3s ease;
 }
-
 .nexora-branding a:hover img {
   transform: scale(1.05);
   filter: drop-shadow(0 0 18px rgba(0, 217, 255, 0.7));
 }
-
 .nexora-menu-list {
   display: flex;
   align-items: center;
   gap: 25px;
   list-style: none;
 }
-
 .nexora-menu-list a {
   text-decoration: none;
   color: var(--gray);
