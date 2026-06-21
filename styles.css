@@ -24,29 +24,83 @@ body {
 }
 
 .carousel-item {
-    position: relative;
-    background: var(--black);
+  position: relative;
+  background: var(--black);
 }
 
 .carousel-item img {
-    width: 100%;
-    aspect-ratio: 16 / 9; 
-    object-fit: cover;
-    object-position: center;
-    display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .carousel-caption {
-    position: absolute;
-    bottom: 5%; 
-    left: 5%;
-    right: 5%;
-    padding: 10px; 
-    background: var(--dark-trans);
-    border: 1px solid var(--cyan);
-    border-radius: 10px;
-    text-align: center;
-    z-index: 10;
-    box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
-    backdrop-filter: blur(5px);
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  padding: 10px;
+  background: var(--dark-trans);
+  border: 1px solid var(--cyan);
+  border-radius: 10px;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+.carousel-caption h2,
+.carousel-caption p {
+  font-family: "Saira Stencil", sans-serif;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 5px var(--cyan),
+    0 0 10px var(--cyan),
+    0 0 20px var(--cyan);
+}
+
+.carousel-caption h2 {
+  letter-spacing: 2px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--cyan) !important;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: var(--white) !important;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px var(--cyan);
+}
+
+@media (max-width: 480px) {
+  .carousel-caption {
+    bottom: 2%;
+    padding: 5px;
+  }
+  .carousel-caption h2 {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-item img {
+    aspect-ratio: 21 / 9;
+  }
+  .carousel-caption {
+    width: 50%;
+    left: 25%;
+    bottom: 15%;
+    padding: 20px;
+  }
+  .carousel-caption h2 {
+    font-size: 2rem !important;
+  }
 }
