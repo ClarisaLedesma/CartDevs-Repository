@@ -115,3 +115,110 @@ h2 {
   color: var(--cyan);
   filter: drop-shadow(0 0 5px var(--cyan));
 }
+.input-icono input {
+  width: 100%;
+  background: rgba(3, 5, 7, 0.6);
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  padding: 15px 15px 15px 45px;
+  border-radius: 6px;
+  color: var(--white);
+  font-size: 0.9rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-icono input:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+}
+
+.btn-ingresar {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 2px solid var(--cyan);
+  color: var(--white);
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: 0.4s;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.1);
+  text-decoration: none;
+}
+
+.btn-ingresar:hover {
+  background: var(--cyan);
+  color: var(--black);
+  box-shadow: 0 0 25px var(--cyan);
+}
+
+.flex-center {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pantalla-exito {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: aparecer 0.5s ease forwards;
+}
+
+.icono-exito {
+  font-size: 4rem;
+  color: var(--cyan);
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 15px var(--cyan));
+}
+
+.pantalla-exito h3 {
+  color: var(--white);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.pantalla-exito p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.control-pantalla:checked ~ .contenedor-recuperar .pantalla-formulario {
+  display: none;
+}
+
+.control-pantalla:checked ~ .contenedor-recuperar .pantalla-exito {
+  display: flex;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-recuperar {
+    padding: 30px 20px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .input-icono input {
+    padding: 12px 12px 12px 40px;
+  }
+  .btn-ingresar {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
