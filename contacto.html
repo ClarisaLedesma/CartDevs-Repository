@@ -64,21 +64,21 @@
                 <div class="col-lg">
                   <div class="name-surname d-flex flex-column">
                     <label for="name">Nombre completo</label>
-                    <input type="text" name="" id="name" />
+                    <input type="text" name="" id="name" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,30}$" required />
                   </div>
                   <div class="email d-flex flex-column">
                     <label for="email">Email</label>
-                    <input type="email" name="" id="email" />
+                    <input type="email" name="" id="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required />
                   </div>
                   <div class="tel d-flex flex-column">
                     <label for="tel">Telefono</label>
-                    <input type="tel" name="" id="tel" />
+                    <input type="tel" name="" id="tel" pattern="^[+]?[0-9\s\-]{8,20}$" required />
                   </div>
                 </div>
                 <div class="col-lg">
                   <div class="dropdown d-flex flex-column">
                     <label for="dropdown">Asunto</label>
-                    <select name="Asunto" id="dropdown">
+                    <select name="Asunto" id="dropdown" required>
                       <option>Soporte técnico</option>
                       <option>Pedido</option>
                       <option>Devolución</option>
@@ -87,7 +87,7 @@
                   </div>
                   <div class="message d-flex flex-column">
                     <label for="message">Mensaje</label>
-                    <textarea name="" id="message"></textarea>
+                    <textarea name="" id="message" minlength="10" maxlength="400" required></textarea>
                   </div>
                   <div class="button d-flex justify-content-end">
                     <button type="submit">ENVIAR MENSAJE</button>
