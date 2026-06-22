@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Saira Stencil", sans-serif;
 }
 
 :root {
@@ -11,15 +12,688 @@
   --dark: #0a0f14;
   --white: #fff;
   --gray: #b0b0b0;
+  --cyan-rgb: 0, 217, 255;
+  --blue-rgb: 0, 153, 204;
+  --black-rgb: 3, 5, 7;
+  --white-rgb: 255, 255, 255;
+  --dark-trans: rgba(10, 15, 20, 0.85);
   --negro-claro: #1d1b1b42;
-
   --font-primary: "Orbitron", sans-serif;
 }
 
 body {
-  background-color: var(--dark);
+  margin: 0;
+  background-color: var(--black);
   color: var(--white);
+  overflow-x: hidden;
   font-family: "Rethink Sans", sans-serif;
+}
+
+.nexora-nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background: rgba(10, 12, 18, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 217, 255, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nexora-branding img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(0, 217, 255, 0.35));
+  transition: 0.3s ease;
+}
+.nexora-branding a:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 18px rgba(0, 217, 255, 0.7));
+}
+.nexora-menu-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+.nexora-menu-list a {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: var(--fs-nav); 
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nexora-menu-list li a:hover,
+.nexora-has-drop:hover > .nexora-drop-btn {
+  color: var(--cyan);
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.6);
+}
+
+.nexora-arrow {
+  font-size: 0.75rem;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.nexora-has-drop {
+  position: relative;
+}
+
+.nexora-mobile-item,
+.nexora-mobile-search-item {
+  display: none;
+}
+
+.nexora-nav-main .nexora-sub-panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(15px);
+  background: rgba(10, 15, 20, 0.98);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.7),
+    0 0 15px rgba(0, 217, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px 0;
+  min-width: 220px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.nexora-sub-panel li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: var(--gray);
+  white-space: nowrap;
+}
+
+.nexora-sub-panel li a:hover {
+  background: rgba(0, 217, 255, 0.08);
+  color: var(--white);
+  padding-left: 25px;
+}
+
+.nexora-nav-main .nexora-has-drop:hover .nexora-sub-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(5px);
+  pointer-events: auto;
+}
+
+.nexora-nav-main .nexora-has-drop:hover .nexora-arrow {
+  transform: rotate(180deg);
+}
+
+.nexora-search-container {
+  position: relative;
+}
+
+.nexora-search-container input {
+  width: 220px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  background: #111826;
+  color: var(--white);
+  outline: none;
+  transition: all 0.3s;
+}
+
+.nexora-search-container input:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+}
+
+.nexora-search-results {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  width: 100%;
+  background: #111826;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 10px;
+  z-index: 50;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.nexora-search-container input:focus + .nexora-search-results,
+.nexora-search-results:hover {
+  display: flex;
+}
+
+.nexora-search-results a {
+  padding: 10px;
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nexora-search-results a:hover {
+  background: rgba(0, 217, 255, 0.1);
+  color: var(--cyan);
+}
+
+.nexora-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nexora-label-trigger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nexora-ui-icon {
+  font-size: 20px;
+  color: var(--white);
+  cursor: pointer;
+  transition:
+    color 0.3s,
+    transform 0.2s;
+}
+
+.nexora-ui-icon:hover {
+  color: var(--cyan);
+  transform: translateY(-2px);
+}
+
+.nexora-burger-trigger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nexora-burger-trigger .nexora-burger-line {
+  width: 26px;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nexora-chk-modal,
+.nexora-chk-menu {
+  display: none;
+}
+.nexora-modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 5, 7, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -9999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+.nexora-modal-box {
+  background: var(--dark-trans);
+  border: 2px solid rgba(0, 217, 255, 0.25);
+  box-shadow: 0 0 35px rgba(0, 217, 255, 0.15);
+  width: 90%;
+  max-width: 420px;
+  padding: 40px 30px;
+  border-radius: 16px;
+  position: relative;
+  transform: scale(0.8) translateY(-30px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.nexora-chk-modal {
+  display: none;
+}
+.nexora-modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 5, 7, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.35s ease;
+}
+.nexora-modal-box {
+  background: var(--dark-trans);
+  border: 2px solid rgba(0, 217, 255, 0.25);
+  box-shadow: 0 0 35px rgba(0, 217, 255, 0.15);
+  width: 90%;
+  max-width: 420px;
+  padding: 40px 30px;
+  border-radius: 16px;
+  position: relative;
+  transform: scale(0.8);
+  transition: transform 0.35s ease;
+}
+
+#nexora-modal-toggle:checked ~ .nexora-login-modal {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 9999;
+}
+#nexora-modal-toggle:checked ~ .nexora-login-modal .nexora-modal-box {
+  transform: scale(1);
+}
+#nexora-register-toggle:checked ~ .nexora-register-modal {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 9999;
+}
+#nexora-register-toggle:checked ~ .nexora-register-modal .nexora-modal-box {
+  transform: scale(1);
+}
+.nexora-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--gray);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10000;
+  transition: color 0.3s ease;
+}
+.nexora-modal-close:hover {
+  color: var(--cyan);
+}
+.nexora-modal-top {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.nexora-modal-top h2 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+.nexora-modal-top h2 span {
+  color: var(--cyan);
+  text-shadow: 0 0 10px var(--cyan);
+}
+.nexora-modal-top p {
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+.nexora-modal-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nexora-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.nexora-form-row label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray);
+}
+.nexora-field-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nexora-field-wrapper i {
+  position: absolute;
+  left: 15px;
+  color: var(--cyan);
+  font-size: 0.9rem;
+}
+
+.nexora-field-wrapper input {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 217, 255, 0.15);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+.nexora-field-wrapper input:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.2);
+}
+
+.nexora-field-wrapper input:user-valid {
+  border-color: #00ff66 !important;
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.15);
+}
+.nexora-switch-modal-btn {
+  color: var(--cyan);
+  font-weight: 500;
+  cursor: pointer;
+  transition: text-shadow 0.3s;
+}
+.nexora-switch-modal-btn:hover {
+  text-shadow: 0 0 8px var(--cyan);
+}
+
+.nexora-form-terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+.nexora-form-terms input[type="checkbox"] {
+  accent-color: var(--cyan);
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.nexora-form-terms label {
+  font-size: 0.75rem;
+  color: var(--gray);
+  cursor: pointer;
+  user-select: none;
+}
+
+.nexora-form-meta {
+  display: flex;
+  justify-content: flex-end;
+}
+.nexora-link-recovery {
+  font-size: 0.75rem;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nexora-link-recovery:hover {
+  color: var(--cyan);
+}
+
+.nexora-btn-submit {
+  background: transparent;
+  border: 2px solid var(--cyan);
+  color: var(--white);
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.1);
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+.nexora-btn-submit:hover {
+  background: var(--cyan);
+  color: var(--black);
+  box-shadow: 0 0 25px var(--cyan);
+}
+.nexora-modal-bottom {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+.nexora-modal-bottom a {
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 890px) {
+  .nexora-nav-main {
+    padding: 12px 20px;
+  }
+
+  .nexora-search-container {
+    display: none;
+  }
+
+  .nexora-hide-on-mobile {
+    display: none;
+  }
+
+  .nexora-cart-fixed {
+    font-size: 20px;
+  }
+
+  .nexora-burger-trigger {
+    display: flex;
+  }
+
+  .nexora-mobile-search-item {
+    display: block;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+  }
+
+  .nexora-inner-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #111826;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    border-radius: 10px;
+    padding: 0 15px;
+    transition: all 0.3s ease;
+  }
+
+  .nexora-input-mobile {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 12px 0;
+    font-family: "Orbitron", sans-serif;
+    font-size: 14px;
+  }
+
+  .nexora-inner-search:focus-within {
+    border-color: var(--cyan);
+    box-shadow: 0 0 12px rgba(0, 217, 255, 0.3);
+  }
+
+  .nexora-search-results-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #111826;
+    border: 1px solid rgba(0, 217, 255, 0.25);
+    border-radius: 10px;
+    margin-top: 6px;
+    display: none;
+    flex-direction: column;
+    z-index: 2000;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  .nexora-search-results-mobile a {
+    display: block;
+    padding: 12px 15px;
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.2s ease;
+  }
+
+  .nexora-search-results-mobile a:hover {
+    background: rgba(0, 217, 255, 0.08);
+    color: var(--cyan);
+  }
+
+  .nexora-input-mobile:focus + .nexora-search-results-mobile,
+  .nexora-search-results-mobile:hover {
+    display: flex;
+  }
+
+  .nexora-mobile-item {
+    display: block;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nexora-mobile-user-lbl {
+    display: block;
+    padding: 14px 0;
+    color: var(--cyan) !important;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .nexora-mobile-user-lbl i {
+    margin-right: 8px;
+  }
+
+  .nexora-menu-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 10, 15, 0.98);
+    border-bottom: 2px solid rgba(0, 217, 255, 0.25);
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1050;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .nexora-menu-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nexora-menu-list li a {
+    display: block;
+    padding: 14px 0;
+    font-size: 1rem;
+  }
+
+  .nexora-chk-menu:checked ~ .nexora-menu-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nexora-chk-menu:checked
+    ~ .nexora-actions-group
+    .nexora-burger-trigger
+    .nexora-burger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background-color: var(--cyan);
+    box-shadow: 0 0 10px var(--cyan);
+  }
+  .nexora-chk-menu:checked
+    ~ .nexora-actions-group
+    .nexora-burger-trigger
+    .nexora-burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  .nexora-chk-menu:checked
+    ~ .nexora-actions-group
+    .nexora-burger-trigger
+    .nexora-burger-line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background-color: var(--cyan);
+    box-shadow: 0 0 10px var(--cyan);
+  }
+
+  .nexora-nav-main .nexora-sub-panel {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    background: rgba(0, 0, 20, 0.4) !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    display: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding: 5px 0 !important;
+    pointer-events: auto !important;
+  }
+
+  .nexora-has-drop:hover .nexora-sub-panel,
+  .nexora-has-drop:focus-within .nexora-sub-panel {
+    display: block !important;
+  }
+
+  .nexora-sub-panel li a {
+    padding: 12px 0 !important;
+    font-size: 0.9rem !important;
+    color: var(--white) !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  .nexora-sub-panel li a:hover {
+    padding-left: 0 !important;
+    background: transparent !important;
+    color: var(--cyan) !important;
+  }
+}
+.nexora-chk-modal {
+  display: none;
+}
+.nexora-switch-link {
+  cursor: pointer;
+  color: #00d9ff;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 5px;
+  transition: color 0.2s ease;
+}
+
+.nexora-switch-link:hover {
+  color: #0088cc;
+}
+
+#nexora-modal-toggle:checked ~ .nexora-login-modal {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#nexora-register-toggle:checked ~ .nexora-register-modal {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* //SECTION-ECOMMERCE */
