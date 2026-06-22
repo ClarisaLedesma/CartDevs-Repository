@@ -40,13 +40,66 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./contacto.css" />
   </head>
   <body>
+    <header></header>
     <main>
-      <!-- //NAVBAR -->
+      <!-- //CONTACT -->
 
-      
+      <section class="contact">
+        <div class="row">
+          <article class="col-lg-6">
+            <span class="span-top">CONTÁCTANOS</span>
+            <h2 class="d-flex h2-top">
+              Envíanos un
+              <div class="mx-2">mensaje</div>
+            </h2>
+            <p class="p-top">
+              Completa el formulario y nuestro equipo te responderá lo antes
+              posible.
+            </p>
+            <form action="">
+              <div class="row form">
+                <div class="col-lg">
+                  <div class="name-surname d-flex flex-column">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" name="" id="name" />
+                  </div>
+                  <div class="email d-flex flex-column">
+                    <label for="email">Email</label>
+                    <input type="email" name="" id="email" />
+                  </div>
+                  <div class="tel d-flex flex-column">
+                    <label for="tel">Telefono</label>
+                    <input type="tel" name="" id="tel" />
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <div class="dropdown d-flex flex-column">
+                    <label for="dropdown">Asunto</label>
+                    <select name="Asunto" id="dropdown">
+                      <option>Soporte técnico</option>
+                      <option>Pedido</option>
+                      <option>Devolución</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                  <div class="message d-flex flex-column">
+                    <label for="message">Mensaje</label>
+                    <textarea name="" id="message"></textarea>
+                  </div>
+                  <div class="button">
+                    <button type="submit">ENVIAR</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </article>
+          <!-- /// -->
+          <article class="col-lg-6 iframe"></article>
+        </div>
+      </section>
 
       <!-- //FOOTER -->
       <footer class="footer-nexora">
