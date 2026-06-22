@@ -491,7 +491,7 @@ body {
 
   .nexora-shop h3 {
     color: var(--white);
-    font-size: 13px;
+    font-size: 10px;
     font-weight: bold;
     text-shadow: 0 0 20px var(--white);
   }
@@ -788,7 +788,7 @@ body {
   }
 }
 
-@media (min-width: 376px) and (max-width: 426px) {
+@media (min-width:420px) and (max-width: 426px) {
   .h2-promotion {
     padding: 5px 0 18px 0;
     font-family: var(--font-primary);
@@ -809,7 +809,7 @@ body {
   .left h4 {
     font-family: var(--font-primary);
     font-weight: bold;
-    font-size: 13px;
+    font-size: 10px;
     text-shadow: 0 0 30px var(--white);
   }
 
@@ -817,12 +817,12 @@ body {
     color: var(--blue);
     font-family: var(--font-primary);
     font-weight: bold;
-    font-size: 35px;
+    font-size: 25px;
     text-shadow: 0 0 50px var(--cyan);
   }
 
   .left p {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .flag-promotion {
@@ -831,10 +831,13 @@ body {
 
   .right-top input {
     background-color: var(--dark);
-    padding: 10px 20px 10px 10px;
+    padding: 10px 0px 10px 10px;
     border-radius: 9px;
     border: 1px solid rgba(128, 128, 128, 0.327);
     color: var(--white);
+    width: 300px;
+    height: 45px;
+    font-size: 13px;
   }
 
   .right-top input::placeholder {
@@ -842,7 +845,7 @@ body {
   }
 
   .right-top button {
-    padding: 12px 5px;
+    padding: 14px 5px;
     border-radius: 9px;
     margin-left: -40px;
     background-color: var(--blue);
@@ -850,7 +853,7 @@ body {
     box-shadow: 0 0 20px var(--cyan);
     color: var(--white);
     font-weight: bold;
-    font-size: 12px;
+    font-size: 11px;
     transition: 0.4s;
   }
 
@@ -861,6 +864,85 @@ body {
   .right-bottom p {
     color: var(--gray);
     font-size: 11px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 420px) {
+  .h2-promotion {
+    padding: 5px 0 18px 0;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  .container-promotion {
+    padding: 15px 5px 10px;
+  }
+
+  .container-promotion img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+  }
+
+  .left h4 {
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: 9px;
+    text-shadow: 0 0 30px var(--white);
+  }
+
+  .left h3 {
+    color: var(--blue);
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 0 0 50px var(--cyan);
+  }
+
+  .left p {
+    font-size: 8px;
+  }
+
+  .flag-promotion {
+    display: none;
+  }
+
+  .right-top input {
+    background-color: var(--dark);
+    padding: 10px 0px 10px 5px;
+    border-radius: 9px;
+    border: 1px solid rgba(128, 128, 128, 0.327);
+    color: var(--white);
+    width: 250px;
+    font-size: 10px;
+    height: 40px;
+  }
+
+  .right-top input::placeholder {
+    font-size: 12px;
+  }
+
+  .right-top button {
+    padding: 12px 5px;
+    border-radius: 9px;
+    margin-left: -20px;
+    background-color: var(--blue);
+    border: 1px solid var(--cyan);
+    box-shadow: 0 0 20px var(--cyan);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 10px;
+    transition: 0.4s;
+  }
+
+  .right-top button:hover {
+    background-color: var(--cyan);
+  }
+
+  .right-bottom p {
+    color: var(--gray);
+    font-size: 10px;
   }
 }
 
@@ -885,7 +967,7 @@ body {
   .left h4 {
     font-family: var(--font-primary);
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
     text-shadow: 0 0 30px var(--white);
   }
 
@@ -893,12 +975,12 @@ body {
     color: var(--blue);
     font-family: var(--font-primary);
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     text-shadow: 0 0 50px var(--cyan);
   }
 
   .left p {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .flag-promotion {
@@ -911,6 +993,9 @@ body {
     border-radius: 9px;
     border: 1px solid rgba(128, 128, 128, 0.327);
     color: var(--white);
+    width: 200px;
+    height: 33px;
+    font-size: 10px;
   }
 
   .right-top input::placeholder {
@@ -918,15 +1003,15 @@ body {
   }
 
   .right-top button {
-    padding: 10px 2px;
+    padding: 10px 5px;
     border-radius: 9px;
-    margin-left: -40px;
+    margin-left: -20px;
     background-color: var(--blue);
     border: 1px solid var(--cyan);
     box-shadow: 0 0 20px var(--cyan);
     color: var(--white);
     font-weight: bold;
-    font-size: 10px;
+    font-size: 8px;
     transition: 0.4s;
   }
 
@@ -936,7 +1021,7 @@ body {
 
   .right-bottom p {
     color: var(--gray);
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 
