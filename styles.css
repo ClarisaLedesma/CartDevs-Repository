@@ -1067,6 +1067,15 @@ body {
     0 0 20px var(--cyan);
 }
 
+.footer-payments i{
+    font-size: 2rem;
+    color: var(--cyan);
+}
+
+.footer-divider{
+    border-color: rgba(255,255,255,.2);
+    margin-top: 40px;
+}
 .carousel-caption h2 {
   letter-spacing: 2px;
 }
@@ -1087,6 +1096,26 @@ body {
   box-shadow: 0 0 25px var(--cyan);
 }
 
+
+@media (min-width: 992px){
+
+    .footer-logo{
+        margin: 0 0 15px;
+    }
+
+    .footer-description{
+        margin: 0;
+    }
+
+    .footer-social{
+        justify-content: flex-start;
+    }
+
+    .footer-payments{
+        justify-content: flex-start;
+    }
+}
+  
 @media (max-width: 480px) {
   .carousel-caption {
     bottom: 2%;
