@@ -135,12 +135,17 @@ form {
 }
 
 .div-footer{
-    padding: 10px 0 0 0;
+    padding: 12px 0 0 0;
 }
 
-.article-contact div {
-  text-align: left;
+.iframe iframe{
+  width: 100%;
+  height: 565px;
+  background-color: black;
+  filter: invert(90%) hue-rotate(180deg);
+  border-radius: 20px;
 }
+
 /* //FOOTER */
 
 .footer-nexora {
