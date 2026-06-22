@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cyan: #00d9ff;
+  --blue: #0099cc;
+  --black: #030507;
+  --dark: #0a0f14;
+  --white: #fff;
+  --gray: #b0b0b0;
+  --negro-claro: #1d1b1b42;
+
+  --font-primary: "Orbitron", sans-serif;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--white);
+  font-family: "Rethink Sans", sans-serif;
+}
+
+
+
+/* //FOOTER */
+
+.footer-nexora {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 50px 0 20px;
+}
+
+.footer-logo {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.footer-description {
+  font-family: "Rethink Sans", sans-serif;
+  color: var(--gray);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-family: "Bungee", sans-serif;
+  color: var(--cyan);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-social a {
+  color: var(--white);
+  font-size: 1.8rem;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: var(--cyan);
+}
+
+.footer-payments {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-payments i {
+  font-size: 2rem;
+  color: var(--cyan);
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-family: "Rethink Sans", sans-serif;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 992px) {
+  .footer-logo {
+    margin: 0 0 15px;
+  }
+
+  .footer-description {
+    margin: 0;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+
+  .footer-payments {
+    justify-content: flex-start;
+  }
+}
